@@ -16,7 +16,8 @@
            margin: 0 auto;
            display: flex;
            align-items: center;
-           font-size: 200px;
+           
+           
            justify-content: center;
            
         }
@@ -164,7 +165,10 @@
         write.addEventListener("click",function(){
         var textContainer = document.querySelector(".Image2")
 
+
         var equation = prompt("Enter Katex Equation or Latex Equation:");
+        var font =parseFloat(prompt("Font Size:"));
+        textContainer.style.fontSize =`${font}px`;
         katex.render(equation,textContainer)
         });
 
